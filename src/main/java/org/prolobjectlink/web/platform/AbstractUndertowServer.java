@@ -64,7 +64,7 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		server = Undertow.builder().addHttpListener(serverPort, "localhost").setHandler(path).build();
+		server = Undertow.builder().addHttpListener(serverPort, "0.0.0.0").setHandler(path).build();
 		server.start();
 	}
 
