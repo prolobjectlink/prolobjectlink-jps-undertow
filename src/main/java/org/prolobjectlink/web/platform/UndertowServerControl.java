@@ -37,7 +37,6 @@ public class UndertowServerControl extends AbstractWebControl implements WebServ
 	}
 
 	public static void main(String[] args) {
-		// TODO Port from args
 
 		int port = 8080;
 
@@ -54,7 +53,7 @@ public class UndertowServerControl extends AbstractWebControl implements WebServ
 			database = new LinuxDatabaseServer();
 			server = new LinuxUndertowWebServer(port);
 		} else {
-			Logger.getLogger(UndertowServerControl.class.getName()).log(Level.SEVERE, null, "Not supported platfor");
+			Logger.getLogger(UndertowServerControl.class.getName()).log(Level.SEVERE, null, "Not supported platform");
 			System.exit(1);
 		}
 
