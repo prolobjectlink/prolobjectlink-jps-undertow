@@ -19,45 +19,12 @@
  */
 package org.prolobjectlink.web.platform;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.prolobjectlink.db.DatabaseServer;
-import org.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
-import org.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
-import org.prolobjectlink.db.platform.win32.Win32DatabaseServer;
-import org.prolobjectlink.web.platform.linux.undertow.LinuxUndertowWebServer;
-import org.prolobjectlink.web.platform.macosx.undertow.MacosxUndertowWebServer;
-import org.prolobjectlink.web.platform.win32.undertow.Win32UndertowWebServer;
 
 public class UndertowServerControl extends AbstractWebControl implements WebServerControl {
 
 	public UndertowServerControl(WebServer webServer, DatabaseServer databaseServer) {
 		super(webServer, databaseServer);
-	}
-
-	public static void main(String[] args) {
-
-		int port = 8080;
-
-		UndertowWebServer server = null;
-		DatabaseServer database = null;
-
-		if (WebPlatformUtil.runOnWindows()) {
-			database = new Win32DatabaseServer();
-			server = new Win32UndertowWebServer(port);
-		} else if (WebPlatformUtil.runOnOsX()) {
-			database = new MacosxDatabaseServer();
-			server = new MacosxUndertowWebServer(port);
-		} else if (WebPlatformUtil.runOnLinux()) {
-			database = new LinuxDatabaseServer();
-			server = new LinuxUndertowWebServer(port);
-		} else {
-			Logger.getLogger(UndertowServerControl.class.getName()).log(Level.SEVERE, null, "Not supported platform");
-			System.exit(1);
-		}
-
-		new UndertowServerControl(server, database).run(args);
 	}
 
 }
