@@ -19,9 +19,15 @@
  */
 package org.prolobjectlink.web.platform;
 
+import java.util.List;
+
 import javax.servlet.ServletException;
 
-import org.prolobjectlink.web.servlet.HomeServlet;
+import org.prolobjectlink.web.application.ControllerGenerator;
+import org.prolobjectlink.web.application.ServletUrlMapping;
+import org.prolobjectlink.web.application.UndertowControllerGenerator;
+import org.prolobjectlink.web.servlet.DatabaseServlet;
+import org.prolobjectlink.web.servlet.WelcomeServlet;
 
 import io.undertow.Handlers;
 import io.undertow.Undertow;
@@ -46,12 +52,24 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 		super(serverPort);
 		DeploymentInfo servletBuilder = Servlets.deployment();
 		servletBuilder.setClassLoader(getClass().getClassLoader());
-		servletBuilder.setDeploymentName("test.war");
+		servletBuilder.setDeploymentName("prolobjectlink-jps-undertow.war");
 		servletBuilder.setContextPath("/");
 
-		ServletInfo all = Servlets.servlet(HomeServlet.class.getName(), HomeServlet.class).addMapping("/*");
-		ServletInfo home = Servlets.servlet(HomeServlet.class.getName(), HomeServlet.class).addMapping("/");
-		servletBuilder.addServlets(all, home);
+		ServletInfo home = Servlets.servlet(WelcomeServlet.class.getName(), WelcomeServlet.class)
+				.addMapping("/welcome");
+		servletBuilder.addServlets(home);
+		ServletInfo db = Servlets.servlet(DatabaseServlet.class.getName(), DatabaseServlet.class)
+				.addMapping("/databases");
+		servletBuilder.addServlets(db);
+
+		// application controllers
+		ControllerGenerator controllerGenerator = new UndertowControllerGenerator();
+		List<ServletUrlMapping> mappings = controllerGenerator.getMappings();
+		for (ServletUrlMapping servletUrlMapping : mappings) {
+			ServletInfo info = Servlets.servlet(servletUrlMapping.getServlet().getClass().getName(),
+					servletUrlMapping.getServlet().getClass()).addMapping(servletUrlMapping.getMappingUrl());
+			servletBuilder.addServlets(info);
+		}
 
 		ServletContainer container = Servlets.defaultContainer();
 		DeploymentManager manager = container.addDeployment(servletBuilder);
