@@ -19,14 +19,26 @@
  */
 package org.prolobjectlink.web.platform;
 
+import java.sql.SQLException;
 import java.util.List;
 
+import javax.persistence.spi.PersistenceProvider;
+import javax.persistence.spi.PersistenceUnitInfo;
 import javax.servlet.ServletException;
 
+import org.prolobjectlink.db.DatabaseDriver;
+import org.prolobjectlink.db.DatabaseDriverFactory;
+import org.prolobjectlink.db.jpa.spi.JPAPersistenceUnitInfo;
+import org.prolobjectlink.db.util.JavaReflect;
+import org.prolobjectlink.logging.LoggerConstants;
+import org.prolobjectlink.logging.LoggerUtils;
 import org.prolobjectlink.web.application.ControllerGenerator;
+import org.prolobjectlink.web.application.ModelGenerator;
 import org.prolobjectlink.web.application.ServletUrlMapping;
 import org.prolobjectlink.web.application.UndertowControllerGenerator;
+import org.prolobjectlink.web.application.UndertowModelGenerator;
 import org.prolobjectlink.web.servlet.DatabaseServlet;
+import org.prolobjectlink.web.servlet.ManagerServlet;
 import org.prolobjectlink.web.servlet.WelcomeServlet;
 
 import io.undertow.Handlers;
@@ -61,8 +73,28 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 		ServletInfo db = Servlets.servlet(DatabaseServlet.class.getName(), DatabaseServlet.class)
 				.addMapping("/databases");
 		servletBuilder.addServlets(db);
+		ServletInfo man = Servlets.servlet(ManagerServlet.class.getName(), ManagerServlet.class).addMapping("/manager");
+		servletBuilder.addServlets(man);
 
-		// application controllers
+		// applications models
+		ModelGenerator modelGenerator = new UndertowModelGenerator();
+		List<PersistenceUnitInfo> units = modelGenerator.getPersistenceUnits();
+		for (PersistenceUnitInfo unit : units) {
+			try {
+				DatabaseDriver databaseDriver = DatabaseDriverFactory.createDriver(unit);
+				databaseDriver.createDatabase();
+			} catch (SQLException e) {
+				LoggerUtils.error(getClass(), LoggerConstants.SQL_ERROR, e);
+			}
+			JPAPersistenceUnitInfo jpaUnit = (JPAPersistenceUnitInfo) unit;
+			String name = jpaUnit.getPersistenceProviderClassName();
+			Class<?> cls = JavaReflect.classForName(name);
+			Object object = JavaReflect.newInstance(cls);
+			PersistenceProvider provider = (PersistenceProvider) object;
+			provider.generateSchema(unit, unit.getProperties());
+		}
+
+		// applications controllers
 		ControllerGenerator controllerGenerator = new UndertowControllerGenerator();
 		List<ServletUrlMapping> mappings = controllerGenerator.getMappings();
 		for (ServletUrlMapping servletUrlMapping : mappings) {
@@ -79,8 +111,7 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 		try {
 			path = Handlers.path(Handlers.redirect("/")).addPrefixPath("/", manager.start());
 		} catch (ServletException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LoggerUtils.error(getClass(), LoggerConstants.SERVLET_ERROR, e);
 		}
 		server = Undertow.builder().addHttpListener(serverPort, "0.0.0.0").setHandler(path).build();
 		server.start();

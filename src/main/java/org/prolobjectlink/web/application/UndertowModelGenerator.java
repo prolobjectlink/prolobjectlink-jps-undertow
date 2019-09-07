@@ -19,20 +19,6 @@
  */
 package org.prolobjectlink.web.application;
 
-import org.prolobjectlink.prolog.PrologProvider;
-
-public final class UndertowControllerGenerator extends AbstractControllerGenerator implements ControllerGenerator {
-
-	public UndertowControllerGenerator() {
-		super();
-	}
-
-	public UndertowControllerGenerator(PrologProvider provider) {
-		super(provider);
-	}
-
-	public final Class<?> getControllerRuntimeClass() {
-		return UndertowControllerRuntime.class;
-	}
+public final class UndertowModelGenerator extends AbstractModelGenerator implements ModelGenerator {
 
 }
