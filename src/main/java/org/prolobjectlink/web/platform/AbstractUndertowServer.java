@@ -77,21 +77,23 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 		servletBuilder.addServlets(man);
 
 		// applications models
-		ModelGenerator modelGenerator = new UndertowModelGenerator();
-		List<PersistenceUnitInfo> units = modelGenerator.getPersistenceUnits();
-		for (PersistenceUnitInfo unit : units) {
-			try {
+		try {
+			ModelGenerator modelGenerator = new UndertowModelGenerator();
+			List<PersistenceUnitInfo> units = modelGenerator.getPersistenceUnits();
+			for (PersistenceUnitInfo unit : units) {
 				DatabaseDriver databaseDriver = DatabaseDriverFactory.createDriver(unit);
-				databaseDriver.createDatabase();
-			} catch (SQLException e) {
-				LoggerUtils.error(getClass(), LoggerConstants.SQL_ERROR, e);
+				if (!databaseDriver.getDatabasePing()) {
+					databaseDriver.createDatabase();
+					JPAPersistenceUnitInfo jpaUnit = (JPAPersistenceUnitInfo) unit;
+					String name = jpaUnit.getPersistenceProviderClassName();
+					Class<?> cls = JavaReflect.classForName(name);
+					Object object = JavaReflect.newInstance(cls);
+					PersistenceProvider provider = (PersistenceProvider) object;
+					provider.generateSchema(unit, unit.getProperties());
+				}
 			}
-			JPAPersistenceUnitInfo jpaUnit = (JPAPersistenceUnitInfo) unit;
-			String name = jpaUnit.getPersistenceProviderClassName();
-			Class<?> cls = JavaReflect.classForName(name);
-			Object object = JavaReflect.newInstance(cls);
-			PersistenceProvider provider = (PersistenceProvider) object;
-			provider.generateSchema(unit, unit.getProperties());
+		} catch (SQLException e) {
+			LoggerUtils.error(getClass(), LoggerConstants.SQL_ERROR, e);
 		}
 
 		// applications controllers
