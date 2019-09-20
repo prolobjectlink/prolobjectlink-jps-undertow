@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2019-09-22T15:36:40.304">
+<file name="D:\Programacion\eclipse-java-photon-workspace\prolobjectlink-jps-undertow\src\main\java\org\prolobjectlink\web\application\UndertowControllerGenerator.java">
+<violation beginline="34" endline="36" begincolumn="22" endcolumn="9" rule="UnnecessaryFinalModifier" ruleset="Basic Rules" package="org.prolobjectlink.web.application" class="UndertowControllerGenerator" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnnecessaryFinalModifier" priority="3">
+Unnecessary final modifier in final class
+</violation>
+</file>
+<file name="D:\Programacion\eclipse-java-photon-workspace\prolobjectlink-jps-undertow\src\main\java\org\prolobjectlink\web\platform\AbstractUndertowServer.java">
+<violation beginline="98" endline="100" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="org.prolobjectlink.web.platform" class="AbstractUndertowServer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="121" endline="121" begincolumn="73" endcolumn="81" rule="AvoidUsingHardCodedIP" ruleset="Basic Rules" package="org.prolobjectlink.web.platform" class="AbstractUndertowServer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#AvoidUsingHardCodedIP" priority="3">
+Do not hard code IPv4 or IPv6 addresses, even 127.0.0.1 !
+</violation>
+</file>
+</pmd>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>prolobjectlink-jps-undertow - Checkstyle report</title>
+    <link>https://github.com/prolobjectlink/prolobjectlink-jps-undertow</link>
+    <description>prolobjectlink-jps-undertow - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2012 - 2019 Prolobjectlink Project</copyright>
+    <item>
+      <title>File: 9,
+             Errors: 199,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.win32.undertow.Win32UndertowWebServer.java">org/prolobjectlink/web/platform/win32/undertow/Win32UndertowWebServer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.macosx.undertow.MacosxUndertowWebServer.java">org/prolobjectlink/web/platform/macosx/undertow/MacosxUndertowWebServer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.AbstractUndertowServer.java">org/prolobjectlink/web/platform/AbstractUndertowServer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  105
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.UndertowServerControl.java">org/prolobjectlink/web/platform/UndertowServerControl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.linux.undertow.LinuxUndertowWebServer.java">org/prolobjectlink/web/platform/linux/undertow/LinuxUndertowWebServer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.UndertowWebServer.java">org/prolobjectlink/web/platform/UndertowWebServer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowModelGenerator.java">org/prolobjectlink/web/application/UndertowModelGenerator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerGenerator.java">org/prolobjectlink/web/application/UndertowControllerGenerator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerRuntime.java">org/prolobjectlink/web/application/UndertowControllerRuntime.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  27
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+

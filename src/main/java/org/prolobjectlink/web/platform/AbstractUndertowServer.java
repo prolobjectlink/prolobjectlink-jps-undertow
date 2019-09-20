@@ -38,6 +38,7 @@ import org.prolobjectlink.web.application.ServletUrlMapping;
 import org.prolobjectlink.web.application.UndertowControllerGenerator;
 import org.prolobjectlink.web.application.UndertowModelGenerator;
 import org.prolobjectlink.web.servlet.DatabaseServlet;
+import org.prolobjectlink.web.servlet.DocumentsServlet;
 import org.prolobjectlink.web.servlet.ManagerServlet;
 import org.prolobjectlink.web.servlet.WelcomeServlet;
 
@@ -75,6 +76,8 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 		servletBuilder.addServlets(db);
 		ServletInfo man = Servlets.servlet(ManagerServlet.class.getName(), ManagerServlet.class).addMapping("/manager");
 		servletBuilder.addServlets(man);
+		ServletInfo doc = Servlets.servlet(DocumentsServlet.class.getName(), DocumentsServlet.class).addMapping("/doc");
+		servletBuilder.addServlets(doc);
 
 		// applications models
 		try {
@@ -93,7 +96,7 @@ public abstract class AbstractUndertowServer extends AbstractWebServer implement
 				}
 			}
 		} catch (SQLException e) {
-			LoggerUtils.error(getClass(), LoggerConstants.SQL_ERROR, e);
+			// do nothing
 		}
 
 		// applications controllers
