@@ -37,10 +37,10 @@ import org.prolobjectlink.web.application.ModelGenerator;
 import org.prolobjectlink.web.application.ServletUrlMapping;
 import org.prolobjectlink.web.application.UndertowControllerGenerator;
 import org.prolobjectlink.web.application.UndertowModelGenerator;
-import org.prolobjectlink.web.servlet.DatabaseServlet;
-import org.prolobjectlink.web.servlet.DocumentsServlet;
-import org.prolobjectlink.web.servlet.ManagerServlet;
-import org.prolobjectlink.web.servlet.WelcomeServlet;
+import org.prolobjectlink.web.servlet.admin.DatabaseServlet;
+import org.prolobjectlink.web.servlet.admin.DocumentsServlet;
+import org.prolobjectlink.web.servlet.admin.ManagerServlet;
+import org.prolobjectlink.web.servlet.admin.WelcomeServlet;
 
 import io.undertow.Handlers;
 import io.undertow.Undertow;
