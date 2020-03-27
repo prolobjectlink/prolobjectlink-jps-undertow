@@ -6,10 +6,10 @@
     <link>https://github.com/prolobjectlink/prolobjectlink-jps-undertow</link>
     <description>prolobjectlink-jps-undertow - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2012 - 2019 Prolobjectlink Project</copyright>
+    <copyright>&#169;2012 - 2020 Prolobjectlink Project</copyright>
     <item>
-      <title>File: 9,
-             Errors: 203,
+      <title>File: 10,
+             Errors: 220,
              Warnings: 0,
              Infos: 0
       </title>
@@ -141,6 +141,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowMiscGenerator.java">org/prolobjectlink/web/application/UndertowMiscGenerator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerRuntime.java">org/prolobjectlink/web/application/UndertowControllerRuntime.java</a>
                 </td>
                 <td>
@@ -150,7 +164,7 @@
                   0
                 </td>
                 <td>
-                  31
+                  40
                 </td>
               </tr>
                       </tbody>
