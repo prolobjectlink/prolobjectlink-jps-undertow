@@ -19,7 +19,7 @@
  */
 package org.prolobjectlink.web.application;
 
-import org.prolobjectlink.prolog.PrologProvider;
+import io.github.prolobjectlink.prolog.PrologProvider;
 
 public final class UndertowControllerGenerator extends AbstractControllerGenerator implements ControllerGenerator {
 
