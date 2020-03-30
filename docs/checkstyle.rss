@@ -3,19 +3,19 @@
 <rss version="0.91">
   <channel>
     <title>prolobjectlink-jps-undertow - Checkstyle report</title>
-    <link>https://github.com/prolobjectlink/prolobjectlink-jps-undertow</link>
+    <link>https://prolobjectlink.github.io/prolobjectlink-jps-undertow</link>
     <description>prolobjectlink-jps-undertow - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2012 - 2020 Prolobjectlink Project</copyright>
+    <copyright>&#169;2020 Prolobjectlink Project</copyright>
     <item>
       <title>File: 10,
              Errors: 220,
              Warnings: 0,
              Infos: 0
       </title>
-            <link>https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html</link>
+            <link>https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html</link>
       <description>
-        <p>Click <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -29,7 +29,7 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.win32.undertow.Win32UndertowWebServer.java">org/prolobjectlink/web/platform/win32/undertow/Win32UndertowWebServer.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.win32.undertow.Win32UndertowWebServer.java">org/prolobjectlink/web/platform/win32/undertow/Win32UndertowWebServer.java</a>
                 </td>
                 <td>
                   0
@@ -43,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.macosx.undertow.MacosxUndertowWebServer.java">org/prolobjectlink/web/platform/macosx/undertow/MacosxUndertowWebServer.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.macosx.undertow.MacosxUndertowWebServer.java">org/prolobjectlink/web/platform/macosx/undertow/MacosxUndertowWebServer.java</a>
                 </td>
                 <td>
                   0
@@ -57,7 +57,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.AbstractUndertowServer.java">org/prolobjectlink/web/platform/AbstractUndertowServer.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.AbstractUndertowServer.java">org/prolobjectlink/web/platform/AbstractUndertowServer.java</a>
                 </td>
                 <td>
                   0
@@ -71,7 +71,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.UndertowServerControl.java">org/prolobjectlink/web/platform/UndertowServerControl.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.UndertowServerControl.java">org/prolobjectlink/web/platform/UndertowServerControl.java</a>
                 </td>
                 <td>
                   0
@@ -85,7 +85,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.linux.undertow.LinuxUndertowWebServer.java">org/prolobjectlink/web/platform/linux/undertow/LinuxUndertowWebServer.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.linux.undertow.LinuxUndertowWebServer.java">org/prolobjectlink/web/platform/linux/undertow/LinuxUndertowWebServer.java</a>
                 </td>
                 <td>
                   0
@@ -99,7 +99,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.UndertowWebServer.java">org/prolobjectlink/web/platform/UndertowWebServer.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.platform.UndertowWebServer.java">org/prolobjectlink/web/platform/UndertowWebServer.java</a>
                 </td>
                 <td>
                   0
@@ -113,7 +113,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowModelGenerator.java">org/prolobjectlink/web/application/UndertowModelGenerator.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowModelGenerator.java">org/prolobjectlink/web/application/UndertowModelGenerator.java</a>
                 </td>
                 <td>
                   0
@@ -127,7 +127,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerGenerator.java">org/prolobjectlink/web/application/UndertowControllerGenerator.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerGenerator.java">org/prolobjectlink/web/application/UndertowControllerGenerator.java</a>
                 </td>
                 <td>
                   0
@@ -141,7 +141,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowMiscGenerator.java">org/prolobjectlink/web/application/UndertowMiscGenerator.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowMiscGenerator.java">org/prolobjectlink/web/application/UndertowMiscGenerator.java</a>
                 </td>
                 <td>
                   0
@@ -155,7 +155,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerRuntime.java">org/prolobjectlink/web/application/UndertowControllerRuntime.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jps-undertow/checkstyle.html#org.prolobjectlink.web.application.UndertowControllerRuntime.java">org/prolobjectlink/web/application/UndertowControllerRuntime.java</a>
                 </td>
                 <td>
                   0

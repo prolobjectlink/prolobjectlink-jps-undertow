@@ -8,12 +8,12 @@
 	<name>prolobjectlink-jps-undertow</name>
 	<description>Embedded Server over Undertow servlet container</description>
 
-	<url>https://github.com/prolobjectlink/${project.name}</url>
-	<inceptionYear>2012</inceptionYear>
+	<url>https://prolobjectlink.github.io/${project.name}</url>
+	<inceptionYear>2020</inceptionYear>
 
 	<organization>
 		<name>Prolobjectlink Project</name>
-		<url>https://github.com/prolobjectlink/${project.name}</url>
+		<url>https://prolobjectlink.github.io/${project.name}</url>
 	</organization>
 
 	<licenses>
@@ -29,7 +29,7 @@
 			<name>Jose Zalacain</name>
 			<email>jzalacain@nauta.cu</email>
 			<organization>Logicware Developments</organization>
-			<organizationUrl>http://www.logicware.org</organizationUrl>
+			<organizationUrl>https://prolobjectlink.github.io/${project.name}</organizationUrl>
 			<roles>
 				<role>architect</role>
 				<role>developer</role>
@@ -42,7 +42,7 @@
 	<scm>
 		<developerConnection>scm:git:https://github.com/prolobjectlink/${project.name}.git</developerConnection>
 		<connection>scm:git:https://github.com/prolobjectlink/${project.name}.git</connection>
-		<url>https://github.com/prolobjectlink/${project.name}</url>
+		<url>https://prolobjectlink.github.io/${project.name}</url>
 
 	</scm>
 
@@ -77,11 +77,11 @@
 		</snapshotRepository>
 		<repository>
 			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<url>https://oss.sonatype.org/content/repositories/release/</url>
 		</repository>
 		<site>
 			<id>website</id>
-			<url>dav:https://webdav.opendrive.com/Public%20Folder/${project.name}</url>
+			<url>https://prolobjectlink.github.io/${project.name}</url>
 		</site>
 	</distributionManagement>
 
@@ -367,6 +367,11 @@
 					</execution>
 				</executions>
 			</plugin>
+		<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+            </plugin>
 		</plugins>
 	</build>
 
@@ -397,11 +402,11 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.apache.maven.plugins</groupId> -->
-			<!-- <artifactId>maven-javadoc-plugin</artifactId> -->
-			<!-- <version>3.0.0</version> -->
-			<!-- </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
@@ -469,26 +474,31 @@
 					</tags>
 				</configuration>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.codehaus.mojo</groupId> -->
-			<!-- <artifactId>javancss-maven-plugin</artifactId> -->
-			<!-- <version>2.0</version> -->
-			<!-- </plugin> -->
-			<!-- <plugin> -->
-			<!-- <groupId>org.codehaus.mojo</groupId> -->
-			<!-- <artifactId>clirr-maven-plugin</artifactId> -->
-			<!-- <version>2.2.2</version> -->
-			<!-- <configuration> -->
-			<!-- <comparisonArtifacts> -->
-			<!-- <comparisonArtifact> -->
-			<!-- <groupId>commons-lang</groupId> -->
-			<!-- <artifactId>commons-lang</artifactId> -->
-			<!-- <version>2.6</version> -->
-			<!-- </comparisonArtifact> -->
-			<!-- </comparisonArtifacts> -->
-			<!-- <minSeverity>info</minSeverity> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>javancss-maven-plugin</artifactId>
+				<version>2.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>clirr-maven-plugin</artifactId>
+				<version>2.2.2</version>
+				<configuration>
+					<comparisonArtifacts>
+						<comparisonArtifact>
+							<groupId>commons-lang</groupId>
+							<artifactId>commons-lang</artifactId>
+							<version>2.6</version>
+						</comparisonArtifact>
+					</comparisonArtifacts>
+					<minSeverity>info</minSeverity>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.18.1</version>
+			</plugin>
 		</plugins>
 	</reporting>
 
